@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      color: #212529;
+    }
+    /* Navbar */
+    .navbar {
+      background: #0d3b66;
+      color: #fff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar img {
+      height: 45px;
+    }
+    .navbar-title {
+      font-size: 12px;
+      line-height: 1.3;
+      text-align: left;
+      margin-left: 10px;
+      flex: 1;
+    }
+    .navbar-actions {
+      margin-left: auto;
+    }
+    .navbar-actions a {
+      background: #007bff;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    /* Step progress */
+    .steps {
+      margin: 20px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .step-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 8px;
+    }
+    .done { background: #28a745; }
+    .pending { background: #6c757d; }
+    .step button {
+      flex: 1;
+      background: #0d3b66;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      text-align: left;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    /* Card Section */
+    .card {
+      margin: 20px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      border: 1px solid #ddd;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 3px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn-back {
+      background: #17a2b8;
+      color: #fff;
+    }
+    .btn-pending {
+      background: #dc3545;
+      color: #fff;
+      margin-left: 10px;
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      color: #0d3b66;
+    }
+    .info {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    /* Profile Photo */
+    .profile-photo {
+      display: block;
+      margin: 10px 0;
+      height: 120px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* Small buttons */
+    .detail-btn, .upload-btn, .valid-btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 6px 12px;
+      font-size: 12px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .detail-btn { background: #0d3b66; }
+    .upload-btn { background: #007bff; }
+    .valid-btn { background: #28a745; }
+
+    /* Hidden input */
+    input[type="file"] {
+      display: none;
+    }
+
+    /* Catatan merah */
+    .note {
+      margin: 25px 20px;
+      font-size: 14px;
+      color: red;
+      font-weight: bold;
+      border: 1px solid #f5c6cb;
+      background: #f8d7da;
+      padding: 12px;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0d3b66;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .footer p {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="https://kanimpekanbaru.kemenkumham.go.id/images/logo_gabunagan_imigrasi_imipas.png" alt="Logo">
+    <div class="navbar-title">
+      MINISTRY OF IMMIGRATION AND CORRECTIONS<br>
+      DIRECTORATE GENERAL OF IMMIGRATION
+    </div>
+    <div class="navbar-actions">
+      <a href="https://imigrasi.go.id">Home</a>
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step">
+      <div class="step-icon done">✔</div>
+      <button>Apply</button>
+    </div>
+    <div class="step">
+      <div class="step-icon done">✔</div>
+      <button>Payment</button>
+    </div>
+    <div class="step">
+      <div class="step-icon pending">○</div>
+      <button>Download E-Visa</button>
+    </div>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+    <h3>Application Information</h3>
+    <button class="btn btn-back">Back</button>
+    <button class="btn btn-pending">Pending</button>
+
+    <h3>Visa Information</h3>
+    <div class="info">Reference No.: 20709258I153339</div>
+    <div class="info">Payment Receipt No.: </div>
+    <div class="info">Visa No.: </div>
+    <div class="info">Valid From: </div>
+    <div class="info">Valid Until: </div>
+    <div class="info">Visa Code: VOA</div>
+
+    <h3>Personal Information</h3>
+    <img class="profile-photo" src="profil.jpg" alt="Profile Photo">
+    <div class="info">Full name: TEKIN ISA</div>
+    <div class="info">Sex: MALE</div>
+    <div class="info">Place of Birth: KIRSEHIR</div>
+    <div class="info">Date of Birth: 10/10/1984</div>
+    <div class="info">Phone Number: 08758152626</div>
+
+    <h3>Passport (or other travel document) Information</h3>
+    <div class="info">Passport No.: C79MGVYMT</div>
+    <div class="info">Nationality: JERMAN</div>
+    <div class="info">Date of Expiry: 09/02/2032</div>
+    <div class="info">Issuing Country: STADT HERTEN</div>
+    <button class="detail-btn">Detail</button>
+
+    <h3>Residence Information</h3>
+    <div class="info">Residence Type: OTHERS</div>
+    <div class="info">Address: KP SARONGGE KIDUL</div>
+    <div class="info">Province: JAWA BARAT</div>
+    <div class="info">City: KAB. CIANJUR</div>
+    <div class="info">District: PACET</div>
+    <div class="info">Village: CIHERANG</div>
+    <div class="info">Postal Code: 43253</div>
+
+    <h3>Passport (or other travel document) Information</h3>
+    <div class="info">
+      Return Ticket 
+      <label for="file-upload" class="upload-btn">Upload</label>
+      <input id="file-upload" type="file" accept="image/*,.pdf">
+    </div>
+    <button class="valid-btn">Passport Valid for at Least 6 Months</button>
+  </div>
+
+  <!-- Catatan merah -->
+  <div class="note">
+    ⚠️ Perhatian: Anda wajib upload bukti tiket pulang pergi agar visa ini dapat segera Anda download. Karena sebelumnya Anda pernah melakukan pelanggaran, kami harap Anda bisa mengikuti ketentuan-ketentuan kami sebagaimana yang telah kami berikan.
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <img src="https://kanimpekanbaru.kemenkumham.go.id/images/logo_gabunagan_imigrasi_imipas.png" alt="Logo">
+    <p>Direktorat Jenderal Imigrasi</p>
+    <p>Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia</p>
+    <p>Jl. H.R. Rasuna Said Kav. 8-9, Kuningan, Jakarta Selatan</p>
+    <p>Telepon: 1500-110 | Website: www.imigrasi.go.id</p>
+  </div>
+
+</body>
+</html>
